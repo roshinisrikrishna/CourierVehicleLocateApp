@@ -21,7 +21,7 @@ const db = mysql.createPool({
 
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "http://couriertrip.trackman.in",
   methods: ["POST", "GET","PUT","DELETE"],
   credentials: true
 }));
