@@ -21,7 +21,7 @@ const db = mysql.createPool({
 
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "http://www.couriertrip.trackman.in",
   methods: ["POST", "GET","PUT","DELETE"],
   credentials: true
 }));
@@ -79,7 +79,7 @@ app.post('/users/create', (req, res) => {
   });
 });
 
-app.post('/login', (req, res) => {
+app.post('/', (req, res) => {
   const { username, password } = req.body;
   console.log('entered login');
 
@@ -292,6 +292,6 @@ function fetchAndStoreData(userId,apiKey) {
 
 // Schedule the data fetching and storing process to run every hour (adjust as needed)
 // Start the server
-app.listen(5000, () => {
+app.listen(process.env.PORT||5000, () => {
 console.log('Server running on port 5000');
 });

@@ -10,7 +10,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
-const LOGIN_URL = '/login';
+const LOGIN_URL = '/';
 
 const initialState = {
   username: "",
